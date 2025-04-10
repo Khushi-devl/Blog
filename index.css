@@ -1,0 +1,137 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-weight: 500%;
+    color:#636e7a
+}
+
+/* Header */
+header {
+    background: #48585f;
+    color: rgb(36, 31, 31);
+    font-style:oblique;
+    font-size: 25;
+    padding: 1rem 0;
+    text-align:left;
+}
+h2{
+    font-size: 35;
+    color: #50565c;
+}
+h3{
+    font-size: 300%;
+}
+
+header h1 {
+    margin:0;
+}
+
+/* Navigation */
+nav.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav.links a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.links a.active {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+section h2, section h3 {
+    color: #72ddd1;
+}
+
+/* Paragraphs */
+p, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 {
+    margin: 0.5rem 0;
+}
+
+/* Images */
+.section img {
+    object-fit: scale-down;
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-image-width: 20%;
+    -moz-box-align: center;
+
+}
+body {
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  
+  body {
+    background: url('wave.svg');
+    background-size: cover;
+    animation: waveAnimation 20s linear infinite;
+  }
+  
+/* Define the keyframes for the animation */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Apply the animation to the body or any other element */
+  body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+    
+  .tp3 img{
+    width: 30%;
+    height: 20%;
+
+  }
+  .tp6 img{
+    width:30%;
+    height:20%;
+  }
+  .about img{
+    width:60%;
+    height:50%;
+  }
+  .active{
+    text-transform:uppercase;
+    font-weight:500;
+    letter-spacing: 0px;
+    margin:40px 0;
+  }
