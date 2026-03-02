@@ -1,41 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav.links a');
+    const sections = document.querySelectorAll('section');
 
+    // 1. Smooth Scroll with Offset for Header
     navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
+            const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Adjust for sticky header
-                    behavior: 'smooth'
-                });
-            }
+            window.scrollTo({
+                top: targetSection.offsetTop - 100,
+                behavior: 'smooth'
+            });
         });
     });
 
-    // Active link highlighting on scroll
-    const sections = document.querySelectorAll('section');
-    
+    // 2. Scroll Spy (Highlight active link)
     window.addEventListener('scroll', () => {
-        let current = '';
+        let current = "";
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 75) {
+            if (pageYOffset >= sectionTop - 150) {
                 current = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
+            if (link.getAttribute('href').includes(current)) {
                 link.classList.add('active');
             }
         });
     });
-
-}); 
+});
