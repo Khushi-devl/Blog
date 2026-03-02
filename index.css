@@ -65,18 +65,19 @@ nav.links a:hover, nav.links a.active {
 }
 
 /* Hero Section - Fixed with singular 'image' path */
+/* Hero Section Fix - Background Image Added */
 .hero {
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('image/oceanography.jpg');
-    background-size: cover;
-    background-position: center;
+    /* Yahan image path add kar diya hai taaki photo dikhe */
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                url('image/oceanography.jpg') no-repeat center center/cover;
     text-align: center;
     padding: 20px;
-    margin-top: 80px; /* Space for sticky header */
+    margin-top: 80px;
 }
 
 .hero h2 {
